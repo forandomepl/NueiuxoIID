@@ -15,23 +15,6 @@ class CausalEstimator:
 
     Subclasses implement different estimation methods. All estimation methods are in the package "dowhy.causal_estimators"
 
-    """
-    # The default number of simulations for statistical testing
-    DEFAULT_NUMBER_OF_SIMULATIONS_STAT_TEST = 1000
-    # The default number of simulations to obtain confidence intervals
-    DEFAULT_NUMBER_OF_SIMULATIONS_CI = 100
-    # The portion of the total size that should be taken each time to find the confidence intervals
-    # 1 is the recommended value
-    # https://ocw.mit.edu/courses/mathematics/18-05-introduction-to-probability-and-statistics-spring-2014/readings/MIT18_05S14_Reading24.pdf
-    # https://projecteuclid.org/download/pdf_1/euclid.ss/1032280214
-    DEFAULT_SAMPLE_SIZE_FRACTION = 1
-    # The default Confidence Level
-    DEFAULT_CONFIDENCE_LEVEL = 0.95
-    # Number of quantiles to discretize continuous columns, for applying groupby
-    NUM_QUANTILES_TO_DISCRETIZE_CONT_COLS = 5
-    # Prefix to add to temporary categorical variables created after discretization
-    TEMP_CAT_COLUMN_PREFIX = "__categorical__"
-
     DEFAULT_NOTIMPLEMENTEDERROR_MSG = "not yet implemented for {0}. If you would this to be implemented in the next version, please raise an issue at https://github.com/microsoft/dowhy/issues"
 
     BootstrapEstimates = namedtuple('BootstrapEstimates', ['estimates', 'params'])
